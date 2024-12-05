@@ -25,7 +25,7 @@ const WeatherDashboard = () => {
   }, [city]);
 
   const fetchAirQualityData = (lat, lon) => {
-    const API_KEY = "d4adf20e0f06dd329d60cd20157d541f"; 
+    const API_KEY = import.meta.env.VITE_REACT_WEATHER_API; 
     axios
       .get(
         `https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${API_KEY}`
